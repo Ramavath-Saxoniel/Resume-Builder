@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume Builder</title>
+    <style type="text/css">
+        .form_for_input{
+            width: 80%;
+            margin: 8% auto;
+            margin-top: 20px;
+            background-color: white;
+            border-color: red;
+            border-radius: 10px;
+            padding-left: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        h1{
+            text-align: center;
+            font-size: 100px;
+            color: darkred;
+        }
+        label{
+            font-size: 25px;
+        }
+        input, textarea{
+        	font-family: cursive;
+            font-size: 30px;
+            border: none;
+            display: block;
+            border-bottom: 2px solid #000;
+            width: 80%;
+            transition: border-bottom-color 0.25s ease-in;
+        	text-align: right; /* Align inputs to the left */
+        	margin-left: 50px; /* Add this line to push the inputs to the left */
+        }
+        input:focus, textarea:focus{
+            outline: none;
+            border-bottom-color: blue;
+        }
+        table{
+        	border-collapse: collapse;
+        	border: 1px solid black;
+        }
+        td, th{
+        	border: 1px solid black;
+        	padding: 8px;
+        }
+        .heading{
+        	font-size: 35px;
+        }
+        .buttons{
+        	display: block;
+    		margin: 20px auto;
+    		background-color: #089622;
+    		height: 70px;
+    		width: 30%;
+    		color: #fff;
+    		font-size: 40px;
+    		text-align: center;
+    		border: none;
+    		border-radius: 5px;
+    		cursor: pointer;
+        }
+        .buttons:hover{
+        	background-color: #414c50;
+        }
+    </style>
+</head>
+<body style="align-items: center; background-color: lawngreen;">
+    <h1>Build Your own Resume by filling this form</h1>
+    <div class="form_for_input">
+        <form action="how to create resume using html.html" method="get" enctype="multipart/form-data">
+        	<b><label class="heading">Basic Details : </label></b><br><br><br><br><br>
+            <label>Name : </label><label style="color: red;">*</label><input type="text" name="name" id="name" required><br><br><br><br>
+            <label>Role : </label><label style="color: red;">*</label><input type="text" name="role" id="role" required><br><br><br><br>
+            <label>Phone : </label><label style="color: red;">*</label><input type="text" name="phone" id="phone" required><br><br><br><br>
+            <label>Email : </label><label style="color: red;">*</label><input type="text" name="email" id="email" required><br><br><br><br>
+            <label>Github : </label><input type="text" name="github" id="github" ><br><br><br><br>
+            <label>LinkedIn : </label><input type="text" name="linkedin" id="linkedin" ><br><br><br><br>
+            <label>Objective : </label><label style="color: red;">*</label><input type="text" name="objectives" id="objectives" required><br><br><br><br><br>
+
+            <b><label class="heading">Education 1 : </label><label class="heading" style="color: red;">*</label></b><br><br><br><br>
+            <label>Year : </label><input type="text"  name="education1_year" id="education1_year" required><br><br><br><br>
+            <label>Course : </label><input type="text"  name="education1_course" id="education1_course" required><br><br><br><br>
+            <label>School Name : </label><input type="text"  name="education1_school" id="education1_school" required><br><br><br><br>
+            <label>Marks Obtained : </label><input type="text"  name="education1_marks" id="education1_marks" required><br><br><br><br>
+            <label>Place of School : </label><input type="text"  name="education1_place" id="education1_place" required><br><br><br><br><br>
+            <b><label class="heading">Education 2 : </label></b><br><br><br><br>
+            <label>Year : </label><input type="text"  name="education2_year" id="education2_year"><br><br><br><br>
+            <label>Course : </label><input type="text"  name="education2_course" id="education2_course"><br><br><br><br>
+            <label>School Name : </label><input type="text"  name="education2_school" id="education2_school"><br><br><br><br>
+            <label>Marks Obtained : </label><input type="text"  name="education2_marks" id="education2_marks"><br><br><br><br>
+            <label>Place of School : </label><input type="text"  name="education2_place" id="education2_place"><br><br><br><br><br>
+            <b><label class="heading">Education 3: </label></b><br><br><br><br>
+            <label>Year : </label><input type="text"  name="education3_year" id="education3_year"><br><br><br><br>
+            <label>Course : </label><input type="text"  name="education3_course" id="education3_course"><br><br><br><br>
+            <label>School Name : </label><input type="text"  name="education3_school" id="education3_school"><br><br><br><br>
+            <label>Marks Obtained : </label><input type="text"  name="education3_marks" id="education3_marks"><br><br><br><br>
+            <label>Place of School : </label><input type="text"  name="education3_place" id="education3_place"><br><br><br><br><br>
+
+
+            <b><label class="heading">Work Experience 1 : </label></b><br><br><br><br>
+            <label>Year : </label><input type="text"  name="work1_year" id="work1_year"><br><br><br><br>
+            <label>Role : </label><input type="text"  name="work1_role" id="work1_role"><br><br><br><br>
+            <label>Company Name : </label><input type="text"  name="work1_company" id="work1_company"><br><br><br><br>
+            <label>Place of Company : </label><input type="text"  name="work1_place" id="work1_place"><br><br><br><br><br>
+            <b><label class="heading">Work Experience 2 : </label></b><br><br><br><br>
+            <label>Year : </label><input type="text"  name="work2_year" id="work2_year"><br><br><br><br>
+            <label>Role : </label><input type="text"  name="work2_role" id="work2_role"><br><br><br><br>
+            <label>Company Name : </label><input type="text"  name="work2_company" id="work2_company"><br><br><br><br>
+            <label>Place of Company : </label><input type="text"  name="work2_place" id="work2_place"><br><br><br><br><br>
+            <b><label class="heading">Work Experience 3: </label></b><br><br><br><br>
+            <label>Year : </label><input type="text"  name="work3_year" id="work3_year"><br><br><br><br>
+            <label>Role : </label><input type="text"  name="work3_role" id="work3_role"><br><br><br><br>
+            <label>Company Name : </label><input type="text"  name="work3_company" id="work3_company"><br><br><br><br>
+            <label>Place of Company : </label><input type="text"  name="work3_place" id="work3_place"><br><br><br><br><br>
+
+            <b><label class="heading">Project 1 : </label><label class="heading" style="color: red;">*</label></b><br><br><br><br>
+            <label>Title : </label><input type="text"  name="project_title1" id="project_title1" required><br><br><br><br>
+            <label>Description : </label><input type="text"  name="project_description1" id="project_description1" required><br>
+            <br><br><br><br>
+            <b><label class="heading">Project 2 : </label></b><br><br><br><br>
+            <label>Title : </label><input type="text"  name="project_title2" id="project_title2"><br><br><br><br>
+            <label>Description : </label><input type="text"  name="project_description2" id="project_description2"><br>
+            <br><br><br><br>
+            <b><label class="heading">Project 3: </label></b><br><br><br><br>
+            <label>Title : </label><input type="text"  name="project_title3" id="project_title3"><br><br><br><br>
+            <label>Description : </label><input type="text"  name="project_description3" id="project_description3"><br>
+            <br><br><br><br>
+
+
+            <b><label class="heading">Certificate 1 : </label><label class="heading" style="color: red;">*</label></b><br><br><br><br>
+            <label>Year : </label><input type="text"  name="cyear1" id="cyear1" required><br><br><br><br>
+            <label>Course Name : </label><input type="text"  name="cname1" id="cname1" required><br><br><br><br>
+            <label>Company Name : </label><input type="text"  name="ccompany1" id="ccompany1" required><br><br><br><br><br>
+            <b><label class="heading">Certificate 2 : </label></b><br><br><br><br>
+            <label>Year : </label><input type="text"  name="cyear2" id="cyear2"><br><br><br><br>
+            <label>Course Name : </label><input type="text"  name="cname2" id="cname2"><br><br><br><br>
+            <label>Company Name : </label><input type="text"  name="ccompany2" id="ccompany2"><br><br><br><br><br>
+            <b><label class="heading">Certificate 3: </label></b><br><br><br><br>
+            <label>Year : </label><input type="text"  name="cyear3" id="cyear3"><br><br><br><br>
+            <label>Course Name : </label><input type="text"  name="cname3" id="cname3"><br><br><br><br>
+            <label>Company Name : </label><input type="text"  name="ccompany3" id="ccompany3"><br><br><br><br><br>
+
+            <b><label class="heading">Soft Skills: </label></b><br><br><br><br>
+            <label>Skill 1: </label><label style="color: red;">*</label><input type="text" name="sskill1" id="sskill1" required><br><br><br><br>
+            <label>Skill 2: </label><label style="color: red;">*</label><input type="text" name="sskill2" id="sskill2" required><br><br><br><br>
+            <label>Skill 3: </label><label style="color: red;">*</label><input type="text" name="sskill3" id="sskill3" required><br><br><br><br>
+            <label>Skill 4: </label><input type="text" name="sskill4" id="sskill4"><br><br><br><br>
+            <label>Skill 5: </label><input type="text" name="sskill5" id="sskill5"><br><br><br><br>
+            <label>Skill 6: </label><input type="text" name="sskill6" id="sskill6"><br><br><br><br>
+
+            <b><label class="heading">Technical Skills: </label></b><br><br><br><br>
+            <table style="width: 80%;">
+            	<tr>
+            		<th style="font-size: 30px;">Skill</th>
+            		<th style="font-size: 30px;">Beginner/Intermediate/Advanced</th>
+            	</tr>
+            	<tr>
+            		<td><input style="width: 100%; text-align: center; text-align: center; border-bottom: none;" type="text" name="tskill1" id="tskill1" required></td>
+            		<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="tsp1" id="tsp1" required></td>
+            	</tr>
+           		<tr>
+           			<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="tskill2" id="tskill2" required></td>
+           			<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="tsp2" id="tsp2" required></td>
+           		</tr>
+	        	<tr>
+	        		<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="tskill3" id="tskill3" required></td>
+	        		<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="tsp3" id="tsp3" required></td>
+	        	</tr>
+   	        	<tr>
+   	        		<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="tskill4" id="tskill4"></td>
+   	        		<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="tsp4" id="tsp4"></td>
+   	        	</tr>
+    	    	<tr>
+    	    		<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="tskill5" id="tskill5"></td>
+    	    		<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="tsp5" id="tsp5"></td>
+    	    	</tr>
+           		<tr>
+           			<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="tskill6" id="tskill6"></td>
+           			<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="tsp6" id="tsp6"></td>
+           		</tr>
+           	</table><br><br><br><br><br>
+
+           	<b><label class="heading">Interests: </label></b><br><br><br><br>
+           	<label>Interest 1: </label><label style="color: red;">*</label><input type="text" name="interest1" id="interest1" required><br><br><br><br>
+           	<label>Interest 2: </label><label style="color: red;">*</label><input type="text" name="interest2" id="interest2" required><br><br><br><br>
+           	<label>Interest 3: </label><label style="color: red;">*</label><input type="text" name="interest3" id="interest3" required><br><br><br><br>
+           	<label>Interest 4: </label><input type="text" name="interest4" id="interest4"><br><br><br><br>
+           	<label>Interest 5: </label><input type="text" name="interest5" id="interest5"><br><br><br><br>
+           	<label>Interest 6: </label><input type="text" name="interest6" id="interest6"><br><br><br><br>
+
+           	<b><label class="heading">Languages Known: </label></b><br><br><br><br>
+           	<table style="width: 80%">
+           		<tr><th style="font-size: 30px;">Language</th><th style="font-size: 30px;">Eg.,Read, Write, Speak</th></tr>
+           		<tr>
+           			<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="language1" id="language1" required></td>
+           			<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="wrs1" id="wrs1" required></td>
+           		</tr>
+           		<tr>
+           			<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="language2" id="language2"></td>
+       				<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="wrs2" id="wrs2"></td>
+        		</tr>
+        		<tr>
+        			<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="language3" id="language3"></td>
+        			<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="wrs3" id="wrs3"></td>
+          		</tr>
+        		<tr>
+         			<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="language4" id="language4"></td>
+         			<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="wrs4" id="wrs4"></td>
+         		</tr>
+         		<tr>
+         			<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="language5" id="language5"></td>
+         			<td><input style="width: 100%; text-align: center; border-bottom: none;" type="text" name="wrs5" id="wrs5"></td>
+          		</tr>
+       		</table><br><br><br><br>
+       		<a href="how to create resume using html.html?name=Ramavath+Saxoniel&role=Student&phone=9043870065&email=rsaxon026%40gmail.com&github=github.com%2FRamavath-Saxoniel&linkedin=https%3A%2F%2Fwww.linkedin.com%2Fin%2Framavath-saxoniel-4648a423b&objectives=Engineering+Student+with+Problem+Solving+and+Programming+skills%2C+motivated+to+learn%2C+grow+and+excel+in+the+future.+Seeking+a+challenging+position+that+fully+utilizes+my+skills+and+provides+me+with+suitable+opportunities+to+grow+my+technical+and+communication+skills+which+would+help+me+as+a+fresher+to+grow+while+working+towards+the+organizational+goals.&education1_year=2017-2018&education1_course=SSLC&education1_school=Loyola+Academy&education1_marks=84.9%25&education1_place=West+Tambaram%2C+Chennai%2C+Tamil+Nadu&education2_year=2019-2020&education2_course=HSC&education2_school=Sairam+Matriculation+School&education2_marks=66.6%25&education2_place=West+Tambaram%2C+Chennai%2C+Tamil+Nadu&education3_year=2020-2024&education3_course=B.E.+CSE&education3_school=KCG+College+of+Technology&education3_marks=84%25&education3_place=Karapakkam%2C+Chennai%2C+Tamil+Nadu&work1_year=&work1_role=&work1_company=&work1_place=&work2_year=&work2_role=&work2_company=&work2_place=&work3_year=&work3_role=&work3_company=&work3_place=&project_title1=Number+Guessing+Game&project_description1=Number+Guessing+game+is+created+using+Java+swing+and+awt+components.+The+Computer+generates+a+random+number+between+1+and+1000+using+the+random+function%2C+then+player+should+guess+that+generated+number+by+using+the+textfield.+Player+has+10+guesses+at+initial+and+it+will+be+decreased+by+1+when+player+guess+any+number.+If+the+number+guessed+by+player+is+correct+then+the+score+of+the+player+is+number+of+remaining+guesses.+Otherwise+if+remaining+guess+is+0%2C+then+player+can+try+again.&project_title2=Simple+Calculator&project_description2=Simple+Calculator+calculates+the+basic+arithmetic+operations+such+as+addition%2C+subtraction%2C+multiplication+and+division.+This+project+is+implemented+using+PySimpleGUI.+User+can+type+the+expression+in+the+textfield+or+can+also+inputs+the+expression+using+buttons.&project_title3=College+Bus+Tracking+System&project_description3=College+Bus+Tracking+System+is+an+android+application+developed+using+Android+Studio-Flamingo.+It+is+a+real+time+system+as+the+current+location+of+the+bus+is+updated+every+moment+in+the+form+of+latitude+and+longitude%2C+which+is+received+by+the+students+in+a+map.+This+system+doen+not+require+any+tracking+device%2C+but+the+inbuilt+GPS+of+the+driver%27s+mobile+is+used+for+tracking+and+it+is+updated+in+database+in+the+form+of+longitude+and+latitude.&cyear1=April+2023&cname1=Introduction+to+CyberSecurity&ccompany1=Cisco+Networking+Academy&cyear2=September+2020&cname2=Introduction+to+JavaScripts%3A+The+Basics&ccompany2=Coursera&cyear3=July+2020&cname3=Programming+with+Everybody%3A+Getting+started+with+Python&ccompany3=Coursera&sskill1=Communication&sskill2=Creativity&sskill3=Mathematics&sskill4=Problem+Solving&sskill5=Responsibility&sskill6=Teamwork&tskill1=C&tsp1=Intermediate&tskill2=Java&tsp2=Intermediate&tskill3=JavaScript&tsp3=Beginner&tskill4=HTML%2C+CSS&tsp4=Intermediate&tskill5=Python&tsp5=Intermediate&tskill6=&tsp6=&interest1=Cooking&interest2=Travelling&interest3=Programming&interest4=Learning+Foreign+Languages&interest5=&interest6=&language1=English&wrs1=Read%2C+Write%2C+and+Speak&language2=Tamil&wrs2=Read%2C+Write%2C+and+Speak&language3=Telugu&wrs3=Read%2C+Write%2C+and+Speak&language4=&wrs4=&language5=&wrs5=">Click Here to see how the sample resume looks like</a>
+            <input type="submit" class="buttons">
+        </form>
+    </div>
+</body>
+</html>

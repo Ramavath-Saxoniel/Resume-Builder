@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RESUME</title>
+	<style type="text/css">
+		body{
+			margin-top: 75px;
+			background-color: white;
+			align-content: center;
+			margin-left: 75px;
+			margin-right: 75px;
+		}
+		.image{
+			background-color: white;
+			float: left;
+			width: 13%;
+			height: 300px;
+		}
+		.name{
+			width: 100%;
+			height: 300px;
+			float: right;
+			text-align: right;
+			font-style: normal;
+			font-family: serif;
+		}
+		nav{
+			float: left;
+			font-size: 20px;
+			color: black;
+			text-align: center;
+			width: 100%;
+		}
+		.details{
+			float: left;
+			width: 70%;
+			background-color: white;
+			font-family: serif;
+			border-right: black;
+		}
+		.objective{
+			float: left;
+			width: 100%;
+			background-color: white;
+			font-family: serif;
+			border-right: black;
+		}
+		.skills{
+			float: right;
+			width: 29%;
+			background-color: white;
+			font-family: serif;
+		}
+		a{
+			font-size: 20px;
+			color: black;
+			font-style: normal;
+		}
+		.horizontal{
+			height: 1px;
+			background-color: black;
+			width: 100%;
+		}
+		.heading{
+			margin-left: 0.5em;
+		}
+		table{
+			float: left;
+			font-size: 25px;
+			background-color: white;
+			width: 90%;
+		}
+	</style>
+	<script type="text/javascript">
+		window.addEventListener('DOMContentLoaded', (event) => {
+	    	// Get the name from the URL query parameter
+	    	const urlParams = new URLSearchParams(window.location.search);
+
+    		const name = urlParams.get('name');
+    		const nameElement = document.getElementById('name');
+    		nameElement.textContent = name;
+
+	    	const role = urlParams.get('role');
+	    	const roleElement = document.getElementById('role');
+	    	roleElement.textContent = role;
+
+	    	const phone = urlParams.get('phone');
+	    	const phoneElement = document.getElementById('phone');
+	    	phoneElement.textContent = phone;
+	    	const mobile = document.getElementById('mobile-no');
+	    	if (phone && phone.trim() !== '') {
+        		mobile.textContent = 'Phone: ';
+	    	}
+
+    		const email = urlParams.get('email');
+    		const emailElement = document.getElementById('email');
+    		const mail = document.getElementById('mail-id');
+    		if (email && email.trim() !== '') {
+        		emailElement.href = "mailto:" + email;
+        		emailElement.textContent = email;
+        		mail.textContent = 'Email: ';
+    		} else {
+        		emailElement.style.display = 'none';
+        		mail.style.display = 'none';
+    		}
+
+    		const github = urlParams.get('github');
+    		const githubElement = document.getElementById('github');
+    		const githubLink = document.getElementById('github-link');
+    		if (github && github.trim() !== '') {
+        		githubElement.href = "https://" + github;
+        		githubElement.textContent = github;
+        		githubLink.textContent = 'Github: ';
+    		} else {
+        		githubElement.style.display = 'none';
+        		githubLink.style.display = 'none';
+    		}
+
+    		const linkedin = urlParams.get('linkedin');
+    		const linkedinElement = document.getElementById('linkedin');
+    		const linkedinLink = document.getElementById('linkedin-link');
+    		if (linkedin && linkedin.trim() !== '') {
+        		linkedinElement.href = "https://" + linkedin;
+        		linkedinElement.textContent = linkedin;
+        		linkedinLink.textContent = 'LinkedIn: ';
+    		} else {
+        		linkedinElement.style.display = 'none';
+        		linkedinLink.style.display = 'none';
+    		}
+
+	    	const horizontalEducation = document.getElementById('horizontal-Education');
+	    	
+	    	const objective = urlParams.get('objectives');
+    		const objectiveElement = document.getElementById('objectives');
+    		if(objective && objective.trim() !== ''){
+    			objectiveElement.textContent = objective;
+    		} else{
+    			objectiveElement.textContent = "Engineering Student with Problem Solving and Programming skills, motivated to learn, grow and excel in the future. Seeking a challenging position that fully utilizes my skills and provides me with suitable opportunities to grow my technical and communication skills which would help me as a fresher to grow while working towards the organizational goals."
+    		}
+
+    		const course1 = urlParams.get('education1_course');
+    		const course1Element = document.getElementById('education1_course');
+    		course1Element.textContent = " - "+course1;
+
+    		const year1 = urlParams.get('education1_year');
+    		const year1Element = document.getElementById('education1_year');
+    		year1Element.textContent = year1;
+    		
+    		const school1 = urlParams.get('education1_school');
+    		const school1Element = document.getElementById('education1_school');
+    		school1Element.textContent = school1;
+    		
+    		const marks1 = urlParams.get('education1_marks');
+    		const marks1Element = document.getElementById('education1_marks');
+    		marks1Element.textContent = " - "+marks1;
+    		
+    		const place1 = urlParams.get('education1_place');
+    		const place1Element = document.getElementById('education1_place');
+    		place1Element.textContent = place1;
+
+    		const course2 = urlParams.get('education2_course');
+    		const course2Element = document.getElementById('education2_course');
+    		course2Element.textContent = " - "+course2;
+
+    		const year2 = urlParams.get('education2_year');
+    		const year2Element = document.getElementById('education2_year');
+    		year2Element.textContent = year2;
+    		
+    		const school2 = urlParams.get('education2_school');
+    		const school2Element = document.getElementById('education2_school');
+    		school2Element.textContent = school2;
+    		
+    		const marks2 = urlParams.get('education2_marks');
+    		const marks2Element = document.getElementById('education2_marks');
+    		marks2Element.textContent = " - "+marks2;
+    		
+    		const place2 = urlParams.get('education2_place');
+    		const place2Element = document.getElementById('education2_place');
+    		place2Element.textContent = place2;
+
+    		const course3 = urlParams.get('education3_course');
+    		const course3Element = document.getElementById('education3_course');
+    		course3Element.textContent = " - "+course3;
+
+    		const year3 = urlParams.get('education3_year');
+    		const year3Element = document.getElementById('education3_year');
+    		year3Element.textContent = year3;
+    		
+    		const school3 = urlParams.get('education3_school');
+    		const school3Element = document.getElementById('education3_school');
+    		school3Element.textContent = school3;
+    		
+    		const marks3 = urlParams.get('education3_marks');
+    		const marks3Element = document.getElementById('education3_marks');
+    		marks3Element.textContent = " - "+marks3;
+    		
+    		const place3 = urlParams.get('education3_place');
+    		const place3Element = document.getElementById('education3_place');
+    		place3Element.textContent = place3;
+    		
+    		const educationLabel = document.getElementById('education-label');
+    		if(course1 && course1.trim() !== '' && year1 && year1.trim() !== '' && school1 && school1.trim() !== '' && marks1 && marks1.trim() !== '' && place1 && place1.trim() !== ''){
+    			educationLabel.textContent = "Educational Qualification: ";
+    			educationLabel.style.display = 'block';
+    			horizontalEducation.style.display = 'block';
+    		} else {
+    			educationLabel.style.display = 'none';
+    			horizontalEducation.style.display = 'none';
+    			course1Element.style.display = 'none';
+    			year1Element.style.display = 'none';
+    			school1Element.style.display = 'none';
+    			marks1Element.style.display = 'none';
+    			place1Element.style.display = 'none';
+    			course2Element.style.display = 'none';
+    			year2Element.style.display = 'none';
+    			school2Element.style.display = 'none';
+    			marks2Element.style.display = 'none';
+    			place2Element.style.display = 'none';
+    			course3Element.style.display = 'none';
+    			year3Element.style.display = 'none';
+    			school3Element.style.display = 'none';
+    			marks3Element.style.display = 'none';
+    			place3Element.style.display = 'none';
+    		}
+    		if(!course2 || course2.trim() == '' || !year2 || year2.trim() == '' || !school2 || school2.trim() == '' || !marks2 || marks2.trim() == '' || !place2 || place2.trim() == ''){
+    			course2Element.style.display = 'none';
+    			year2Element.style.display = 'none';
+    			school2Element.style.display = 'none';
+    			marks2Element.style.display = 'none';
+    			place2Element.style.display = 'none';
+    		}
+    		if(!course3 || course3.trim() == '' || !year3 || year3.trim() == '' || !school3 || school3.trim() == '' || !marks3 || marks3.trim() == '' || !place3 || place3.trim() == ''){
+    			course3Element.style.display = 'none';
+    			year3Element.style.display = 'none';
+    			school3Element.style.display = 'none';
+    			marks3Element.style.display = 'none';
+    			place3Element.style.display = 'none';
+    		}
+
+    		const workLabel = document.getElementById('work-label');
+    		const horizontalWork = document.getElementById('horizontal-Work');
+
+    		const workyear1 = urlParams.get('work1_year');
+    		const workyear1Element = document.getElementById('work1_year');
+    		workyear1Element.textContent = " - "+workyear1;
+
+    		const workrole1 = urlParams.get('work1_role');
+    		const workrole1Element = document.getElementById('work1_role');
+    		workrole1Element.textContent = workrole1;
+
+    		const workcompany1 = urlParams.get('work1_company');
+    		const workcompany1Element = document.getElementById('work1_company');
+    		workcompany1Element.textContent = workcompany1;
+
+    		const workplace1 = urlParams.get('work1_place');
+    		const workplace1Element = document.getElementById('work1_place');
+    		workplace1Element.textContent = " - "+workplace1;
+
+			const workyear2 = urlParams.get('work2_year');
+    		const workyear2Element = document.getElementById('work2_year');
+    		workyear2Element.textContent = " - "+workyear2;
+
+    		const workrole2 = urlParams.get('work2_role');
+    		const workrole2Element = document.getElementById('work2_role');
+    		workrole2Element.textContent = workrole2;
+
+    		const workcompany2 = urlParams.get('work2_company');
+    		const workcompany2Element = document.getElementById('work2_company');
+    		workcompany2Element.textContent = workcompany2;
+
+    		const workplace2 = urlParams.get('work2_place');
+    		const workplace2Element = document.getElementById('work2_place');
+    		workplace2Element.textContent = " - "+workplace2;
+
+    		const workyear3 = urlParams.get('work3_year');
+    		const workyear3Element = document.getElementById('work3_year');
+    		workyear3Element.textContent = " - "+workyear3;
+
+    		const workrole3 = urlParams.get('work3_role');
+    		const workrole3Element = document.getElementById('work3_role');
+    		workrole3Element.textContent = workrole3;
+
+    		const workcompany3 = urlParams.get('work3_company');
+    		const workcompany3Element = document.getElementById('work3_company');
+    		workcompany3Element.textContent = workcompany3;
+
+    		const workplace3 = urlParams.get('work3_place');
+    		const workplace3Element = document.getElementById('work3_place');
+    		workplace3Element.textContent = " - "+workplace3;
+
+    		if(workyear1 && workyear1.trim() !== '' && workrole1 && workrole1.trim() !=='' && workcompany1 && workcompany1.trim() !=='' && workplace1 && workplace1.trim() !==''){
+    			workLabel.textContent = "Work Experience: ";
+    			workLabel.style.display = 'block';
+    			horizontalWork.style.display = 'block';
+    		} else{
+    			workLabel.style.display = 'none';
+    			horizontalWork.style.display = 'none';
+    			workyear1Element.style.display = 'none';
+    			workrole1Element.style.display = 'none';
+    			workcompany1Element.style.display ='none';
+    			workplace1Element.style.display = 'none';
+    			workyear2Element.style.display = 'none';
+    			workrole2Element.style.display = 'none';
+    			workcompany2Element.style.display ='none';
+    			workplace2Element.style.display = 'none';
+    			workyear3Element.style.display = 'none';
+    			workrole3Element.style.display = 'none';
+    			workcompany3Element.style.display ='none';
+    			workplace3Element.style.display = 'none';
+    		}
+    		if(!workyear2 || workyear2.trim() == '' || !workrole2 || workrole2.trim() =='' || !workcompany2 || workcompany2.trim() =='' || !workplace2 || workplace2.trim() ==''){
+    			workyear2Element.style.display = 'none';
+    			workrole2Element.style.display = 'none';
+    			workcompany2Element.style.display ='none';
+    			workplace2Element.style.display = 'none';
+    		}
+    		if(!workyear3 || workyear3.trim() == '' || !workrole3 || workrole3.trim() =='' || !workcompany3 || workcompany3.trim() =='' || !workplace3 || workplace3.trim() ==''){
+    			workyear3Element.style.display = 'none';
+    			workrole3Element.style.display = 'none';
+    			workcompany3Element.style.display ='none';
+    			workplace3Element.style.display = 'none';
+    		}
+
+    		const horizontalProject = document.getElementById('horizontal-Project');
+    		const projectLabel = document.getElementById('project-label');
+
+    		const projecttitle1 = urlParams.get('project_title1');
+    		const projecttitle1Element = document.getElementById('project_title1');
+    		projecttitle1Element.textContent = projecttitle1+' - ';
+
+    		const projectdescription1 = urlParams.get('project_description1');
+    		const projectdescription1Element = document.getElementById('project_description1');
+    		projectdescription1Element.textContent = projectdescription1;
+
+    		const projecttitle2 = urlParams.get('project_title2');
+    		const projecttitle2Element = document.getElementById('project_title2');
+    		projecttitle2Element.textContent = projecttitle2+' - ';
+
+    		const projectdescription2 = urlParams.get('project_description2');
+    		const projectdescription2Element = document.getElementById('project_description2');
+    		projectdescription2Element.textContent = projectdescription2;
+
+    		const projecttitle3 = urlParams.get('project_title3');
+    		const projecttitle3Element = document.getElementById('project_title3');
+    		projecttitle3Element.textContent = projecttitle3+' - ';
+
+    		const projectdescription3 = urlParams.get('project_description3');
+    		const projectdescription3Element = document.getElementById('project_description3');
+    		projectdescription3Element.textContent = projectdescription3;
+
+    		if(projecttitle1 && projecttitle1.trim() !== '' && projectdescription1 && projectdescription1.trim() !== ''){
+    			projectLabel.textContent = "Projects: ";
+    			projectLabel.style.display = 'block';
+    			horizontalProject.style.display = 'block';
+    		} else{
+    			projectLabel.style.display = 'none';
+    			horizontalProject.style.display = 'none';
+    			projecttitle1Element.style.display = 'none';
+    			projectdescription1Element.style.display = 'none';
+    			projecttitle2Element.style.display = 'none';
+    			projectdescription2Element.style.display = 'none';
+    			projecttitle3Element.style.display = 'none';
+    			projectdescription3Element.style.display = 'none';
+    		}
+    		if(!projecttitle2 || projecttitle2.trim() == '' || !projectdescription2 || projectdescription2.trim() == ''){
+    			projecttitle2Element.style.display = 'none';
+    			projectdescription2Element.style.display = 'none';
+    		}
+    		if(!projecttitle3 || projecttitle3.trim() == '' || !projectdescription3 || projectdescription3.trim() == ''){
+    			projecttitle3Element.style.display = 'none';
+    			projectdescription3Element.style.display = 'none';
+    		}
+
+    		const horizontalCertificate = document.getElementById('horizontal-Certificate');
+    		const certificateLabel = document.getElementById('certificate-label');
+
+    		const cyear1 = urlParams.get('cyear1');
+    		const cyear1Element = document.getElementById('cyear1');
+    		cyear1Element.textContent = cyear1;
+
+    		const cname1 = urlParams.get('cname1');
+    		const cname1Element = document.getElementById('cname1');
+    		cname1Element.textContent = cname1+' - ';
+
+    		const ccompany1 = urlParams.get('ccompany1');
+    		const ccompany1Element = document.getElementById('ccompany1');
+    		ccompany1Element.textContent = ccompany1;
+
+    		const cyear2 = urlParams.get('cyear2');
+    		const cyear2Element = document.getElementById('cyear2');
+    		cyear2Element.textContent = cyear2;
+
+    		const cname2 = urlParams.get('cname2');
+    		const cname2Element = document.getElementById('cname2');
+    		cname2Element.textContent = cname2+' - ';
+
+    		const ccompany2 = urlParams.get('ccompany2');
+    		const ccompany2Element = document.getElementById('ccompany2');
+    		ccompany2Element.textContent = ccompany2;
+
+    		const cyear3 = urlParams.get('cyear3');
+    		const cyear3Element = document.getElementById('cyear3');
+    		cyear3Element.textContent = cyear3;
+
+    		const cname3 = urlParams.get('cname3');
+    		const cname3Element = document.getElementById('cname3');
+    		cname3Element.textContent = cname3+' - ';
+
+    		const ccompany3 = urlParams.get('ccompany3');
+    		const ccompany3Element = document.getElementById('ccompany3');
+    		ccompany3Element.textContent = ccompany3;
+
+    		if(cyear1 && cyear1.trim() !== '' && cname1 && cname1.trim() !== '' && ccompany1 && ccompany1.trim() !== ''){
+    			certificateLabel.textContent = "Certifications: ";
+    			certificateLabel.style.display = 'block';
+    			horizontalCertificate.style.display = 'block';
+    		} else{
+    			certificateLabel.style.display = 'none';
+    			horizontalCertificate.style.display = 'none';
+    			cyear1Element.style.display = 'none';
+    			cname1Element.style.display = 'none';
+    			ccompany1Element.style.display = 'none';
+    			cyear2Element.style.display = 'none';
+    			cname2Element.style.display = 'none';
+    			ccompany2Element.style.display = 'none';
+    			cyear3Element.style.display = 'none';
+    			cname3Element.style.display = 'none';
+    			ccompany3Element.style.display = 'none';
+    		}
+    		if(!cyear2 || cyear2.trim() == '' || !cname2 || cname2.trim() == '' || !ccompany2 || ccompany2.trim() == ''){
+    			cyear2Element.style.display = 'none';
+    			cname2Element.style.display = 'none';
+    			ccompany2Element.style.display = 'none';
+    		}
+    		if(!cyear3 || cyear3.trim() == '' || !cname3 || cname3.trim() == '' || !ccompany3 || ccompany3.trim() == ''){
+    			cyear3Element.style.display = 'none';
+    			cname3Element.style.display = 'none';
+    			ccompany3Element.style.display = 'none';
+    		}
+
+    		const horizontalSSkill = document.getElementById('horizontal-SSkills');
+    		const sskillLabel = document.getElementById('soft-label');
+
+    		const sskill1 = urlParams.get('sskill1');
+    		const sskill1Element = document.getElementById('sskill1');
+    		sskill1Element.textContent = sskill1;
+
+    		const sskill2 = urlParams.get('sskill2');
+    		const sskill2Element = document.getElementById('sskill2');
+    		sskill2Element.textContent = sskill2;
+
+    		const sskill3 = urlParams.get('sskill3');
+    		const sskill3Element = document.getElementById('sskill3');
+    		sskill3Element.textContent = sskill3;
+
+    		const sskill4 = urlParams.get('sskill4');
+    		const sskill4Element = document.getElementById('sskill4');
+    		sskill4Element.textContent = sskill4;
+
+    		const sskill5 = urlParams.get('sskill5');
+    		const sskill5Element = document.getElementById('sskill5');
+    		sskill5Element.textContent = sskill5;
+
+    		const sskill6 = urlParams.get('sskill6');
+    		const sskill6Element = document.getElementById('sskill6');
+    		sskill6Element.textContent = sskill6;
+
+    		if(sskill1 && sskill1.trim() !== ''){
+    			sskillLabel.textContent = "Soft Skills: ";
+    			sskillLabel.style.display = 'block';
+    			horizontalSSkill.style.display = 'block';
+    		} else{
+    			sskillLabel.style.display = 'none';
+    			horizontalSSkill.style.display = 'none';
+    			sskill1Element.style.display = 'none';
+    			sskill2Element.style.display = 'none';
+    			sskill3Element.style.display = 'none';
+    			sskill4Element.style.display = 'none';
+    			sskill5Element.style.display = 'none';
+    			sskill6Element.style.display = 'none';
+    		}
+
+    		const tskillLabel = document.getElementById('tech-label');
+    		const horizontalTSkill = document.getElementById('horizontal-TSkills');
+
+    		const tsp1 = urlParams.get('tsp1');
+    		const tsp1Element = document.getElementById('tsp1');
+    		const trs1 = document.getElementById('trs1');
+    		tsp1Element.textContent = tsp1;
+
+    		const tskill1 = urlParams.get('tskill1');
+    		const tskill1Element = document.getElementById('tskill1');
+    		tskill1Element.textContent = tskill1;
+
+    		const tsp2 = urlParams.get('tsp2');
+    		const tsp2Element = document.getElementById('tsp2');
+    		const trs2 = document.getElementById('trs2');
+    		tsp2Element.textContent = tsp2;
+
+    		const tskill2 = urlParams.get('tskill2');
+    		const tskill2Element = document.getElementById('tskill2');
+    		tskill2Element.textContent = tskill2;
+
+    		const tsp3 = urlParams.get('tsp3');
+    		const tsp3Element = document.getElementById('tsp3');
+    		const trs3 = document.getElementById('trs3');
+    		tsp3Element.textContent = tsp3;
+
+    		const tskill3 = urlParams.get('tskill3');
+    		const tskill3Element = document.getElementById('tskill3');
+    		tskill3Element.textContent = tskill3;
+
+    		const tsp4 = urlParams.get('tsp4');
+    		const tsp4Element = document.getElementById('tsp4');
+    		const trs4 = document.getElementById('trs4');
+    		tsp4Element.textContent = tsp4;
+
+    		const tskill4 = urlParams.get('tskill4');
+    		const tskill4Element = document.getElementById('tskill4');
+    		tskill4Element.textContent = tskill4;
+
+    		const tsp5 = urlParams.get('tsp5');
+    		const tsp5Element = document.getElementById('tsp5');
+    		const trs5 = document.getElementById('trs5');
+    		tsp5Element.textContent = tsp5;
+
+    		const tskill5 = urlParams.get('tskill5');
+    		const tskill5Element = document.getElementById('tskill5');
+    		tskill5Element.textContent = tskill5;
+
+    		const tsp6 = urlParams.get('tsp6');
+    		const tsp6Element = document.getElementById('tsp6');
+    		const trs6 = document.getElementById('trs6');
+    		tsp6Element.textContent = tsp6;
+
+    		const tskill6 = urlParams.get('tskill6');
+    		const tskill6Element = document.getElementById('tskill6');
+    		tskill6Element.textContent = tskill6;
+
+    		if(tskill1 && tskill1.trim() !== '' && tsp1 && tsp1.trim() !== ''){
+    			tskillLabel.textContent = "Technical Skills: ";
+    			tskillLabel.style.display = 'block';
+    			horizontalTSkill.style.display = 'block';
+    		} else{
+    			tskillLabel.style.display = 'none';
+    			horizontalTSkill.style.display = 'none';
+    			tskill1Element.style.display = 'none';
+    			tskill2Element.style.display = 'none';
+    			tskill3Element.style.display = 'none';
+    			tskill4Element.style.display = 'none';
+    			tskill5Element.style.display = 'none';
+    			tskill6Element.style.display = 'none';
+    			tsp1Element.style.display = 'none';
+    			tsp2Element.style.display = 'none';
+    			tsp3Element.style.display = 'none';
+    			tsp4Element.style.display = 'none';
+    			tsp5Element.style.display = 'none';
+    			tsp6Element.style.display = 'none';
+    			trs1.style.display = 'none';
+    			trs2.style.display = 'none';
+    			trs3.style.display = 'none';
+    			trs4.style.display = 'none';
+    			trs5.style.display = 'none';
+    			trs6.style.display = 'none';
+    		}
+    		if(!tskill2 || tskill2.trim() == '' || !tsp2 || tsp2.trim() == ''){
+    			tskill2Element.style.display = 'none';
+    			tsp2Element.style.display = 'none';
+    			trs2.style.display = 'none';
+    		}
+    		if(!tskill3 || tskill3.trim() == '' || !tsp3 || tsp3.trim() == ''){
+    			tskill3Element.style.display = 'none';
+    			tsp3Element.style.display = 'none';
+    			trs3.style.display = 'none';
+    		}
+    		if(!tskill4 || tskill4.trim() == '' || !tsp4 || tsp4.trim() == ''){
+    			tskill4Element.style.display = 'none';
+    			tsp4Element.style.display = 'none';
+    			trs4.style.display = 'none';
+    		}
+    		if(!tskill5 || tskill5.trim() == '' || !tsp5 || tsp5.trim() == ''){
+    			tskill5Element.style.display = 'none';
+    			tsp5Element.style.display = 'none';
+    			trs5.style.display = 'none';
+    		}
+    		if(!tskill6 || tskill6.trim() == '' || !tsp6 || tsp6.trim() == ''){
+    			tskill6Element.style.display = 'none';
+    			tsp6Element.style.display = 'none';
+    			trs6.style.display = 'none';
+    		}
+
+    		const interestLabel = document.getElementById('interest-label');
+    		const horizontalInterest = document.getElementById('horizontal-Interests');
+
+    		const interest1 = urlParams.get('interest1');
+    		const interest1Element = document.getElementById('interest1');
+    		interest1Element.textContent = interest1;
+
+    		const interest2 = urlParams.get('interest2');
+    		const interest2Element = document.getElementById('interest2');
+    		interest2Element.textContent = interest2;
+
+    		const interest3 = urlParams.get('interest3');
+    		const interest3Element = document.getElementById('interest3');
+    		interest3Element.textContent = interest3;
+
+    		const interest4 = urlParams.get('interest4');
+    		const interest4Element = document.getElementById('interest4');
+    		interest4Element.textContent = interest4;
+
+    		const interest5 = urlParams.get('interest5');
+    		const interest5Element = document.getElementById('interest5');
+    		interest5Element.textContent = interest5;
+
+    		const interest6 = urlParams.get('interest6');
+    		const interest6Element = document.getElementById('interest6');
+    		interest6Element.textContent = interest6;
+
+    		if(interest1 && interest1.trim() !== ''){
+    			interestLabel.textContent = "Interests: ";
+    			interestLabel.style.display = 'block';
+    			horizontalInterest.style.display = 'block';
+    		} else{
+    			interestLabel.style.display = 'none';
+    			horizontalInterest.style.display = 'none';
+    			interest1Element.style.display = 'none';
+    			interest2Element.style.display = 'none';
+    			interest3Element.style.display = 'none';
+    			interest4Element.style.display = 'none';
+    			interest5Element.style.display = 'none';
+    			interest6Element.style.display = 'none';
+    		}
+
+    		const horizontalLanguage = document.getElementById('horizontal-Language');
+    		const languageLabel = document.getElementById('language-label');
+
+    		const language1 = urlParams.get('language1');
+    		const wrs1 = urlParams.get('wrs1');
+    		const language1Element = document.getElementById('language1');
+    		language1Element.textContent = language1+' - '+wrs1;
+
+    		const language2 = urlParams.get('language2');
+    		const wrs2 = urlParams.get('wrs2');
+    		const language2Element = document.getElementById('language2');
+    		language2Element.textContent = language2+' - '+wrs2;
+
+    		const language3 = urlParams.get('language3');
+    		const wrs3 = urlParams.get('wrs3');
+    		const language3Element = document.getElementById('language3');
+    		language3Element.textContent = language3+' - '+wrs3;
+
+    		const language4 = urlParams.get('language4');
+    		const wrs4 = urlParams.get('wrs4');
+    		const language4Element = document.getElementById('language4');
+    		language4Element.textContent = language4+' - '+wrs4;
+
+    		const language5 = urlParams.get('language5');
+    		const wrs5 = urlParams.get('wrs5');
+    		const language5Element = document.getElementById('language5');
+    		language5Element.textContent = language5+' - '+wrs5;
+
+    		if(language1 && language1.trim() !== '' && wrs1 && wrs1.trim() !== ''){
+    			languageLabel.textContent = "Languages Known: ";
+    			languageLabel.style.display = 'block';
+    			horizontalLanguage.style.display = 'block';
+    		} else{
+    			languageLabel.style.display = 'none';
+    			horizontalLanguage.style.display = 'none';
+    			language1Element.style.display = 'none';
+    			language2Element.style.display = 'none';
+    			language3Element.style.display = 'none';
+    			language4Element.style.display = 'none';
+    			language5Element.style.display = 'none';
+    		}
+    		if(!language2 || language2.trim() == '' || !wrs2 || wrs2.trim() == ''){
+    			language2Element.style.display = 'none';
+    		}
+    		if(!language3 || language3.trim() == '' || !wrs3 || wrs3.trim() == ''){
+    			language3Element.style.display = 'none';
+    		}
+    		if(!language4 || language4.trim() == '' || !wrs4 || wrs4.trim() == ''){
+    			language4Element.style.display = 'none';
+    		}
+    		if(!language5 || language5.trim() == '' || !wrs5 || wrs5.trim() == ''){
+    			language5Element.style.display = 'none';
+    		}
+		});
+	</script>
+</head>
+<body>
+	<div>
+
+		<div class="name">
+			<label style="font-size: 150px;" name="name" id="name"></label><br>
+			<label style="font-size: 50px; font-family: cursive;" name="role" id="role"></label>
+			<hr style="height: 1px; background-color: black;">
+			<nav>
+				<label id="mobile-no"></label><label id="phone"></label><span style="margin: 0 10px;"></span>
+				<label id="mail-id"></label><a id="email" target="_blank"></a><span style="margin: 0 10px;"></span>
+				<label id="github-link"></label><a id="github" target="_blank"></a><span style="margin: 0 10px;"></span>
+				<label id="linkedin-link"></label><a id="linkedin" target="_blank"></a>
+			</nav><br>
+			<hr style="height: 1px; background-color: black;">
+		</div>
+
+
+		<div class="objective">
+			<b><p style="font-size: 40px; background-color: lightgrey;"><label class="heading">Objective:</label></p></b>
+			<blockquote style="font-size: 25px; text-align: justify;"><span style="margin-left: 4em;"></span>
+				<label id="objectives"></label>
+			</blockquote>
+
+			<hr style="height: 1px; background-color: black;">
+		</div>
+
+
+		<div class="details">
+			<b><p style="font-size: 40px; background-color: lightgrey;"><label id="education-label" class="heading"></label></p></b>
+			<blockquote style="font-size: 25px; text-align: justify;">
+				<b><label id="education1_year"></label><label id="education1_course"></label></b>
+				<blockquote style="font-size: 20px">
+					<p><label id="education1_school"></label><label id="education1_marks"></label></p>
+					<p><label id="education1_place"></label></p>
+				</blockquote>
+
+				<b><label id="education2_year"></label><label id="education2_course"></label></b>
+				<blockquote style="font-size: 20px">
+					<p><label id="education2_school"></label><label id="education2_marks"></label></p>
+					<p><label id="education2_place"></label></p>
+				</blockquote>
+				
+				<b><label id="education3_year"></label><label id="education3_course"></label></b>
+				<blockquote style="font-size: 20px">
+					<p><label id="education3_school"></label><label id="education3_marks"></label></p>
+					<p><label id="education3_place"></label></p>
+				</blockquote>
+			</blockquote>
+
+			<hr class="horizontal" id="horizontal-Education">
+
+			<b><p style="font-size: 40px; background-color: lightgrey;"><label id="work-label" class="heading"></label></p></b>
+			<blockquote style="font-size: 25px; text-align: justify;">
+				<b><label id="work1_role"></label></b><label style="font-size: 20px" id="work1_year"></label>
+				<blockquote style="font-size: 20px">
+					<p><label id="work1_company"></label><label id="work1_place"></label></p>
+				</blockquote>
+
+				<b><label id="work2_role"></label></b><label style="font-size: 20px" id="work2_year"></label>
+				<blockquote style="font-size: 20px">
+					<p><label id="work2_company"></label><label id="work2_place"></label></p>
+				</blockquote>
+
+				<b><label id="work3_role"></label></b><label style="font-size: 20px" id="work3_year"></label>
+				<blockquote style="font-size: 20px">
+					<p><label id="work3_company"></label><label id="work3_place"></label></p>
+				</blockquote>
+			</blockquote>
+
+			<hr class="horizontal" id="horizontal-Work">
+
+			<b><p style="font-size: 40px; background-color: lightgrey;"><label id="project-label" class="heading"></label></p></b>
+			<blockquote style="font-size: 25px; text-align: justify;">
+				<b><label id="project_title1"></label></b>
+				<blockquote style="font-size: 20px">
+					<p><label id="project_description1"></label></p>
+				</blockquote>
+
+				<b><label id="project_title2"></label></b>
+				<blockquote style="font-size: 20px">
+					<p><label id="project_description2"></label></p>
+				</blockquote>
+
+				<b><label id="project_title3"></label></b>
+				<blockquote style="font-size: 20px">
+					<p><label id="project_description3"></label></p>
+				</blockquote>
+			</blockquote>
+
+			<hr class="horizontal" id="horizontal-Project">
+
+			<b><p style="font-size: 40px; background-color: lightgrey;"><label id="certificate-label" class="heading"></label></p></b>
+			<blockquote style="font-size: 25px; text-align: justify;">
+				<b><label id="cname1"></label></b><label style="font-size: 20px" id="cyear1"></label>
+				<blockquote style="font-size: 20px">
+					<p><label id="ccompany1"></label></p>
+				</blockquote>
+
+				<b><label id="cname2"></label></b><label style="font-size: 20px" id="cyear2"></label>
+				<blockquote style="font-size: 20px">
+					<p><label id="ccompany2"></label></p>
+				</blockquote>
+				
+				<b><label id="cname3"></label></b><label style="font-size: 20px" id="cyear3"></label>
+				<blockquote style="font-size: 20px">
+					<p><label id="ccompany3"></label></p>
+				</blockquote>
+			</blockquote>
+
+			<hr class="horizontal" id="horizontal-Certificate">
+		</div>
+
+		<hr style="height: 1850px; width: 0.1%; background-color: black; float: left; margin-left: 8px; margin-top: 20px;">
+
+		<div class="skills">
+			<b><p style="font-size: 40px; background-color: lightgrey;"><label id="soft-label" class="heading"></label></p></b>
+			<blockquote style="font-size: 25px;">
+				<p><label id="sskill1"></label></p>
+				<p><label id="sskill2"></label></p>
+				<p><label id="sskill3"></label></p>
+				<p><label id="sskill4"></label></p>
+				<p><label id="sskill5"></label></p>
+				<p><label id="sskill6"></label></p>
+			</blockquote>
+
+			<hr class="horizontal" id="horizontal-SSkills">
+
+			<b><p style="font-size: 40px; background-color: lightgrey;"><label id="tech-label" class="heading"></label></p></b>
+			<blockquote style="font-size: 25px;">
+				<table>
+					<tr id="trs1" style="height: 50px;"><td style="text-align: left;" id="tskill1"></td><td style="text-align: right;" id="tsp1"></td></p>
+					<tr id="trs2" style="height: 50px;"><td style="text-align: left;" id="tskill2"></td><td style="text-align: right;" id="tsp2"></td></p>
+					<tr id="trs3" style="height: 50px;"><td style="text-align: left;" id="tskill3"></td><td style="text-align: right;" id="tsp3"></td></p>
+					<tr id="trs4" style="height: 50px;"><td style="text-align: left;" id="tskill4"></td><td style="text-align: right;" id="tsp4"></td></p>
+					<tr id="trs5" style="height: 50px;"><td style="text-align: left;" id="tskill5"></td><td style="text-align: right;" id="tsp5"></td></p>
+					<tr id="trs6" style="height: 50px;"><td style="text-align: left;" id="tskill6"></td><td style="text-align: right;" id="tsp6"></td></p>
+				</table>
+			</blockquote>
+
+			<hr class="horizontal" id="horizontal-TSkills">
+
+			<b><p style="font-size: 40px; background-color: lightgrey;"><label id="interest-label" class="heading"></label></p></b>
+			<blockquote style="font-size: 25px;">
+				<p><label id="interest1"></label></p>
+				<p><label id="interest2"></label></p>
+				<p><label id="interest3"></label></p>
+				<p><label id="interest4"></label></p>
+				<p><label id="interest5"></label></p>
+				<p><label id="interest6"></label></p>
+			</blockquote>
+
+			<hr class="horizontal" id="horizontal-Interests">
+
+			<b><p style="font-size: 40px; background-color: lightgrey;"><label id="language-label" class="heading">Languages Known: </label></p></b>
+			<blockquote style="font-size: 25px;">
+				<p><label id="language1"></label></p>
+				<p><label id="language2"></label></p>
+				<p><label id="language3"></label></p>
+				<p><label id="language4"></label></p>
+				<p><label id="language5"></label></p>
+			</blockquote>
+
+			<hr class="horizontal" id="horizontal-Language">
+		</div>
+	</div>
+</body>
+</html>
